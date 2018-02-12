@@ -1,0 +1,12 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+
+    <!-- https://www.w3schools.com/bootstrap/bootstrap_alerts.asp -->
+        <div class="alert alert-info alert-dismissable">
+            {% for message in messages %}
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <strong>{{ message }}</strong>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
