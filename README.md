@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Sarabeth Jaffe
 
 # Overview
@@ -63,6 +62,3 @@ To get the Google authentication to work:
 14. Run application using `python run_app.py`
 
 * If Google Account authentication does not work in Chrome, try Firefox.
-=======
-# linux-server
->>>>>>> ecc9d00d534b8987ab6d66084897f7a56a14268a
