@@ -3,8 +3,8 @@
 
 # Required Information
 ## i. IP address and SSH port.
-Public IP address: 35.160.177.118
-SSH port: 2200
+- Public IP address: 35.160.177.118
+- SSH port: 2200
 
 ## ii. Complete URL to hosted web application.
 URL to hosted webpage: http://ec2-35-160-177-118.us-west-2.compute.amazonaws.com/
@@ -54,16 +54,16 @@ Software installed:
 
 iv. A list of any third-party resources you made use of to complete this project.
 
-http://www.hcidata.info/host2ip.cgi
-http://flask.pocoo.org/docs/0.12/installation/
-https://www.tutorialspoint.com/postgresql/postgresql_create_database.htm
-https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
-http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/#working-with-virtual-environments
-http://docs.sqlalchemy.org/en/latest/core/engines.html#configuring-logging
-A variety of posts on: https://discussions.udacity.com/c/nd004-p7-linux-based-server-configuration
-Udacity Linux Security Videos
-Udacity Web Application Server Videos
-https://stackoverflow.com/questions/40680109/sqlalchemy-import-issue-in-virtualenv
+- http://www.hcidata.info/host2ip.cgi
+- http://flask.pocoo.org/docs/0.12/installation/
+- https://www.tutorialspoint.com/postgresql/postgresql_create_database.htm
+- https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+- http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/#working-with-virtual-environments
+- http://docs.sqlalchemy.org/en/latest/core/engines.html#configuring-logging
+- A variety of posts on: https://discussions.udacity.com/c/nd004-p7-linux-based-server-configuration
+- Udacity Linux Security Videos
+- Udacity Web Application Server Videos
+- https://stackoverflow.com/questions/40680109/sqlalchemy-import-issue-in-virtualenv
 
 SSH key for grader in the "Notes to Reviewer" field.
 
