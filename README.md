@@ -52,7 +52,7 @@ Software installed:
 22. Navigated to application at Lightsail host.
 23. Tested application functionality.
 
-iv. A list of any third-party resources you made use of to complete this project.
+## iv. A list of any third-party resources you made use of to complete this project.
 
 - http://www.hcidata.info/host2ip.cgi
 - http://flask.pocoo.org/docs/0.12/installation/
