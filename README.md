@@ -1,64 +1,71 @@
-## Sarabeth Jaffe
+# Sarabeth Jaffe
+# Linux Server Configuration project
 
-# Overview
-This application is for the Udacity Full Stack Nanodegree project: Build an Item Catalog Application.
+## i. The IP address and SSH port.
 
-In this web app, the user is provided with a list of pre-populated categories and items as well as a user registration and authentication system (Google Accounts). Once logged in, the user will be able to post, edit, or delete their own items.
+Public IP address: 35.160.177.118
+SSH port: 2200
 
-Bug: If Google Accounts authentication does not work in Google Chrome, try testing using Firefox.
+ii. The complete URL to your hosted web application.
 
-# Resources/References:
-1. Udacity
-2. Github
-3. [OAuth documentation](https://oauth.net/code/)
-4. Stackoverflow
-6. [SQL Alchemy](http://www.sqlalchemy.org/)
+URL to hosted webpage: http://ec2-35-160-177-118.us-west-2.compute.amazonaws.com/
 
-## Technologies Used
-1. HTML
-2. CSS
-3. Python
-4. OAuth
-5. Python Flask Framework
-6. SQLite / SQLAlchemy
+iii. A summary of software you installed and configuration changes made.
 
-## Dependencies
-- Vagrant
-- [Udacity Vagrantfile](https://github.com/udacity/fullstack-nanodegree-vm)
-- VirtualBox
-- Python 2.7+
+Software installed:
+Apache2
+mod_wsgi
+PostgreSQL
+git
+pip
+virtualenv
+httplib2
+Python Requests
+oauth2client
+SQLAlchemy
+Flask
+libpq-dev
+Psycopg2
 
-## Setup
-1. Install Vagrant & VirtualBox
-2. Clone the Udacity Vagrantfile
-3. Go to Vagrant directory and either clone this repo or download and place zip here
-3. Launch the Vagrant VM (`vagrant up`)
-4. Log into Vagrant VM (`vagrant ssh`)
-5. Navigate to `cd/vagrant` as instructed in terminal
-6. If any packages need to be updated, run sudo pip install requests
-7. Navigate to the `item-catalog-jaffe` folder, if not already in it.
-8. Setup application database `python database_setup.py`
-9. Insert fake data `python database_init.py`
-10. Run application `python run_app.py`
-11. Access the application locally by going to http://localhost:5000
+Configuration steps:
+1. Create + set up instance on Amazon Lightsail
+2. Connected to instance on local machine by saving private key.
+3. Upgraded currently install packages.
+4. Configured firewall.
+>>> Changes SSH port from 22 to 2200
+>>> Restrict firewall based on specifications in assignment
+5. Created grader account. Gave them admin permissions. Logged in as grader using their key at port 2200.
+6. Configured timezone to UTC.
+7. Configured Apache2 server.
+8. Installed & enabled mod_wsgi so that Flask application could be served up.
+9. Installed psql & restricted remote connections.
+10. Updated Python version.
+11. Created psql user named catalog. Restricted their permissions to database only uses.
+12. Created psql database.
+13. Cloned project into /var/www folder. Modified file to work with psql instead of sqllite calls. Added absolute paths instead of relative.
+14. Set up Google console Oauth permissions. Added client_secrets.json file to project directory. Added client-id to login.html file, and path to client_secrets.json file in __init__.
+15. Installed pip. 
+16. Created virtual environment. 
+17. Activated environment and installed project dependencies (local to the venv).
+18. Create + enable virtual host/.conf file.
+19. Create .wsgi file. 
+20. Activate venv, run database_setup.py, database_init.py. Deactivate the venv.
+21. Restart Apache2 server.
+22. Navigate to application at Lightsail host.
 
-## Using Google Login
-To get the Google authentication to work:
+iv. A list of any third-party resources you made use of to complete this project.
 
-1. Go to [Google Dev API](https://console.developers.google.com)
-2. Sign up or Login if prompted
-3. Go to Credentials
-4. Select Create Crendentials, then OAuth Client ID
-5. Select Web application
-6. Enter name 'Item-Catalog'
-7. Inside the authorized JavaScript origins box input 'http://localhost:5000'
-8. Inside the authorized redirect URIs boxes, input 
-'http://localhost:5000/login' and 'http://localhost:5000/gconnect'
-9. Click Create
-10. Copy the Client ID and paste it into the `data-clientid` in login.html
-11. On the Dev Console click Download JSON
-12. Rename JSON file to client_secrets.json
-13. Place JSON file in item-catalog directory 
-14. Run application using `python run_app.py`
+http://www.hcidata.info/host2ip.cgi
+http://flask.pocoo.org/docs/0.12/installation/
+https://www.tutorialspoint.com/postgresql/postgresql_create_database.htm
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+http://flask.pocoo.org/docs/0.12/deploying/mod_wsgi/#working-with-virtual-environments
+http://docs.sqlalchemy.org/en/latest/core/engines.html#configuring-logging
+A variety of posts on: https://discussions.udacity.com/c/nd004-p7-linux-based-server-configuration
+Udacity Linux Security Videos
+Udacity Web Application Server Videos
+https://stackoverflow.com/questions/40680109/sqlalchemy-import-issue-in-virtualenv
 
-* If Google Account authentication does not work in Chrome, try Firefox.
+SSH key for grader in the "Notes to Reviewer" field.
+
+Thanks!
